@@ -1,0 +1,12 @@
+[win_srv_ad]
+SERVER1.IT-MASTER100.LOCAL
+
+[win_srv_others]
+1C01
+
+[win_all:children]
+win_srv_ad
+win_srv_others
+
+[linux_all]
+zabbix ansible_user=root

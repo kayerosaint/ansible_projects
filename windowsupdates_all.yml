@@ -1,0 +1,14 @@
+---
+- name: update hosts
+  hosts: [win_all]
+  gather_facts: false
+  tasks:
+    - name: Search and download Windows updates without installing
+      win_updates:
+        state: downloaded
+    - name: Install all updates without a schedule tasks
+      win_updates:
+        server_selection: windows_update
+        category_names: '*'
+        reboot: yes
+        log_path: C:\win_update_via_ansible.log

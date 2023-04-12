@@ -1,0 +1,3 @@
+---
+ansible_user: itmaster_admin@IT-MASTER100.LOCAL
+ansible_winrm_transport: kerberos
